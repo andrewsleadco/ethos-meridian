@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8BB0BFX9S9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8BB0BFX9S9');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Information - Ethos Meridian</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            text-align: center;
+            margin: 4rem 0 5rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tagline {
+            font-family: "Times New Roman", Times, serif;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #555;
+            margin-bottom: 3rem;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        /* New styles for mortgage page */
+        .mortgage-section {
+            max-width: 900px;
+            margin: 0 auto 5rem;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.03em;
+        }
+
+        .calculator {
+            background-color: #f8f8f8;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .calculator-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .calculator-results {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-top: 1.5rem;
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-label {
+            font-weight: 500;
+        }
+
+        .button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .calculate-btn {
+            margin-top: 1rem;
+        }
+
+        .faq-container {
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-answer {
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            background-color: #f8f8f8;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .form-row {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-row input,
+        .form-row textarea,
+        .form-row select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-row textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1.5rem 0;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav a {
+            margin: 0 1.5rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #555;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .calculator-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="mortgage.html" class="active">Mortgage Information</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>MORTGAGE SOLUTIONS</h1>
+            <div class="tagline">Financial Planning with Integrity</div>
+            
+            <div class="description">
+                <p>At Ethos Meridian, we're committed to helping you navigate the complexities of mortgage financing. We offer transparent information and personalized solutions to meet your financial goals.</p>
+            </div>
+        </section>
+        
+        <section class="mortgage-section" id="calculator">
+            <h2 class="section-title">Mortgage Calculator</h2>
+            <div class="calculator">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="loan-amount">Loan Amount ($)</label>
+                        <input type="number" id="loan-amount" value="300000" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest-rate">Interest Rate (%)</label>
+                        <input type="number" id="interest-rate" value="4.5" min="0" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-term">Loan Term (years)</label>
+                        <input type="number" id="loan-term" value="30" min="1" max="40">
+                    </div>
+                    <div class="form-group">
+                        <label for="down-payment">Down Payment ($)</label>
+                        <input type="number" id="down-payment" value="60000" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="property-tax">Annual Property Tax ($)</label>
+                        <input type="number" id="property-tax" value="3600" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="insurance">Annual Insurance ($)</label>
+                        <input type="number" id="insurance" value="1200" min="0">
+                    </div>
+                    <div class="full-width">
+                        <button id="calculate-btn" class="button calculate-btn">Calculate</button>
+                    </div>
+                </div>
+                <div class="calculator-results" id="results">
+                    <div class="result-item">
+                        <span class="result-label">Monthly Principal & Interest:</span>
+                        <span id="monthly-payment">$1,216.04</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Monthly Property Tax:</span>
+                        <span id="monthly-tax">$300.00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Monthly Insurance:</span>
+                        <span id="monthly-insurance">$100.00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Total Monthly Payment:</span>
+                        <span id="total-payment">$1,616.04</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Total Payment Over Loan Term:</span>
+                        <span id="total-loan-payment">$581,774.40</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mortgage-section" id="faqs">
+            <h2 class="section-title">Mortgage FAQs</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">What types of mortgages are available?</div>
+                    <div class="faq-answer">
+                        There are several types of mortgages available, including fixed-rate mortgages, adjustable-rate mortgages (ARMs), FHA loans, VA loans, USDA loans, and jumbo loans. Fixed-rate mortgages offer stable interest rates for the entire loan term, while ARMs typically offer lower initial rates that can change over time. Government-backed loans like FHA, VA, and USDA often have more flexible qualification requirements.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How much down payment do I need?</div>
+                    <div class="faq-answer">
+                        The required down payment varies by loan type. Conventional loans typically require 3-20% down, with private mortgage insurance (PMI) required for down payments less than 20%. FHA loans require at least 3.5% down, VA loans can be obtained with 0% down for qualifying veterans, and USDA loans for eligible rural properties may also offer 0% down payment options.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What is the difference between pre-qualification and pre-approval?</div>
+                    <div class="faq-answer">
+                        Pre-qualification is an informal estimate of how much you might be able to borrow based on self-reported financial information. Pre-approval is a more formal process where a lender verifies your income, assets, and credit history to provide a specific loan amount you're approved for. Pre-approval carries more weight with sellers as it demonstrates you're a serious buyer who has already been vetted by a lender.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What factors affect mortgage rates?</div>
+                    <div class="faq-answer">
+                        Mortgage rates are influenced by economic factors like inflation, Federal Reserve policies, the bond market, and overall economic growth. On an individual level, your credit score, loan-to-value ratio, loan type, loan term, and down payment amount can all affect your personal mortgage rate.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What are closing costs?</div>
+                    <div class="faq-answer">
+                        Closing costs are fees associated with finalizing your mortgage and typically range from 2-5% of the loan amount. These may include lender fees (application, origination, and underwriting), third-party fees (appraisal, title search, title insurance), prepaid expenses (property taxes, homeowners insurance), and potential discount points to lower your interest rate.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">When is refinancing a good idea?</div>
+                    <div class="faq-answer">
+                        Refinancing may be beneficial if you can secure a lower interest rate (typically at least 0.5-1% lower than your current rate), want to change from an adjustable to a fixed-rate mortgage, need to remove PMI, want to change your loan term, or need to tap into home equity. Consider the closing costs and how long you plan to stay in the home to determine if refinancing makes financial sense.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mortgage-section" id="contact-us">
+            <h2 class="section-title">Speak with a Mortgage Specialist</h2>
+            <div class="contact-form">
+                <form id="mortgage-lead-form">
+                    <div class="form-row">
+                        <label for="name">Full Name*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="mortgage-type">Mortgage Type</label>
+                        <select id="mortgage-type" name="mortgage-type">
+                            <option value="" selected disabled>Select mortgage type</option>
+                            <option value="purchase">New Purchase</option>
+                            <option value="refinance">Refinance</option>
+                            <option value="home-equity">Home Equity Loan</option>
+                            <option value="construction">Construction Loan</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="property-value">Estimated Property Value ($)</label>
+                        <input type="number" id="property-value" name="property-value" min="0">
+                    </div>
+                    <div class="form-row">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your mortgage needs, timeline, and any questions you have."></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="button">Request Consultation</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+        <div class="contact-info" id="contact">
+            <p>For mortgage inquiries: <span class="text-bold">mortgages@ethosmeridian.com</span></p>
+            <p>General contact: <span class="text-bold">contact@ethosmeridian.com</span></p>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Ethos Meridian. All rights reserved.</p>
+        </div>
+    </main>
+
+    <script>
+        // Mortgage calculator functionality
+        document.getElementById('calculate-btn').addEventListener('click', function() {
+            // Get input values
+            const loanAmount = parseFloat(document.getElementById('loan-amount').value);
+            const downPayment = parseFloat(document.getElementById('down-payment').value);
+            const interestRate = parseFloat(document.getElementById('interest-rate').value) / 100 / 12; // Monthly interest rate
+            const loanTerm = parseInt(document.getElementById('loan-term').value) * 12; // Term in months
+            const propertyTax = parseFloat(document.getElementById('property-tax').value) / 12; // Monthly property tax
+            const insurance = parseFloat(document.getElementById('insurance').value) / 12; // Monthly insurance
+            
+            // Calculate principal and interest payment
+            const principal = loanAmount - downPayment;
+            const monthlyPayment = principal * (interestRate * Math.pow(1 + interestRate, loanTerm)) / (Math.pow(1 + interestRate, loanTerm) - 1);
+            
+            // Calculate total monthly payment
+            const totalMonthlyPayment = monthlyPayment + propertyTax + insurance;
+            
+            // Calculate total payment over loan term
+            const totalPayment = (totalMonthlyPayment * loanTerm);
+            
+            // Update results
+            document.getElementById('monthly-payment').textContent = '$' + monthlyPayment.toFixed(2);
+            document.getElementById('monthly-tax').textContent = '$' + propertyTax.toFixed(2);
+            document.getElementById('monthly-insurance').textContent = '$' + insurance.toFixed(2);
+            document.getElementById('total-payment').textContent = '$' + totalMonthlyPayment.toFixed(2);
+            document.getElementById('total-loan-payment').textContent = '$' + totalPayment.toFixed(2);
+        });
+        
+        // Form submission handling
+        document.getElementById('mortgage-lead-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                mortgageType: document.getElementById('mortgage-type').value,
+                propertyValue: document.getElementById('property-value').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Here you would typically send the form data to your backend
+            // For demonstration, we'll just show an alert
+            alert('Thank you for your inquiry. A mortgage specialist will contact you shortly.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
